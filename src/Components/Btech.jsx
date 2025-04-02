@@ -7,7 +7,7 @@ const Btech = () => {
       {Object.values(education).map((item, index) => (
         <div 
           key={index} 
-          className="w-full sm:w-[90%] md:w-[45%] lg:w-[30%] p-6 bg-gray-800 rounded-lg shadow-md text-center"
+          className="sm:w-[100%] md:w-[45%] lg:w-[30%] p-6 bg-gray-800 rounded-lg shadow-md text-center"
         >
           <h1 className="text-2xl font-bold text-yellow-400">{item.degree}</h1>
           <h2 className="text-xl text-gray-300 mt-4">{item.college || item.school}</h2>
