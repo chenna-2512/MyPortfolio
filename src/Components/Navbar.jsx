@@ -11,6 +11,7 @@ const Navbar = () => {
         behavior: "smooth",
       });
     }
+    setIsOpen(false);
   };
 
   return (
@@ -19,30 +20,40 @@ const Navbar = () => {
         <h1 className="text-2xl text-yellow-400 font-mono font-bold tracking-wide">
           C.B. Chenna Keshava Reddy
         </h1>
-        
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none">
-            {isOpen ? "✖" : "☰"}
+          <button onClick={() => setIsOpen(true)} className="text-white text-3xl focus:outline-none">
+            ☰
           </button>
         </div>
-        
-        <div
-          className={`absolute md:static bg-black md:bg-transparent w-full left-0 md:w-auto md:flex text-lg font-semibold md:items-center md:space-x-8 transition-all duration-300 ease-in-out ${isOpen ? "block" : "hidden"}`}
-        >
-          {[
-            "Home",
-            "About Me",
-            "Interests",
-            "Projects",
-            "Contact Me",
-          ].map((item, index) => (
+
+        {isOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 text-lg font-semibold transition-transform duration-300 ease-in-out md:hidden">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-5 right-5 text-white text-3xl"
+            >
+              ✖
+            </button>
+
+            {[ "Home", "About Me", "Interests", "Projects", "Contact Me" ].map((item, index) => (
+              <button
+                key={index}
+                onClick={() => handleScroll(item.replace(" ", "").toLowerCase())}
+                className="text-white cursor-pointer transition duration-300 hover:text-yellow-400 px-5 py-2 md:py-0"
+              >
+                {item}
+              </button>
+            ))}
+          </div>
+        )}
+
+        <div className="hidden md:flex text-lg font-semibold space-x-8">
+          {["Home", "About Me", "Interests", "Projects", "Contact Me"].map((item, index) => (
             <button
               key={index}
-              onClick={() => {
-                handleScroll(item.replace(" ", "").toLowerCase());
-                setIsOpen(false);
-              }}
-              className="block md:inline cursor-pointer transition duration-300 hover:text-yellow-400 px-5 py-2 md:py-0 after:block after:content-[''] after:h-[2px] after:w-0 after:bg-red-500 after:transition-all after:duration-300 hover:after:w-full"
+              onClick={() => handleScroll(item.replace(" ", "").toLowerCase())}
+              className="cursor-pointer transition duration-300 hover:text-yellow-400"
             >
               {item}
             </button>
