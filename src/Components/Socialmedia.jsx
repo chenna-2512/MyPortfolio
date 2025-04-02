@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Socialmedia = () => {
   return (
-    <div className="flex gap-2 mt-8">
+    <div className="flex gap-2 mt-8 md:justify-none lg:justify-none sm:justify-cneter">
         <a
             href="https://www.linkedin.com/in/chenna2512/"
             target="_blank"
