@@ -3,7 +3,7 @@ export const education = {
       degree: "Bachelor of Technology",
       college: "G.Pullaiah College of Engineering and Technology",
       branch: "Computer Science and Engineering",
-      percentage: "83%",
+      percentage: "84%",
     },
     inter: {
       degree: "Board of Intermediate",
