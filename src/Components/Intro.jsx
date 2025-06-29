@@ -37,19 +37,30 @@ const Intro = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                <Code className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                Let's Build Together
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
+              <a 
+                href="https://www.linkedin.com/in/chenna2512/"
+                target='_blank' 
+                rel='noopener noreferrer'>
+                  <button className="group bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                    <Code className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                    Let's Build Together
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
+              </a>
 
-              <button className="group border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 flex items-center justify-center">
-                <Download className="w-5 h-5 mr-2" />
-                Download Resume
-              </button>
+              <a 
+                  href="https://drive.google.com/file/d/1wJg_2LH-_i6gvwQRjR6Szg402FK5LnfY/view?usp=sharing" 
+                  target='_blank' 
+                  rel='noopener noreferrer'>
+                  <button className="group border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300 flex items-center justify-center">
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Resume 
+                  </button>
+              </a>
             </div>
+
             {/* Stats Section */}
-            <div className="grid grid-cols-3 gap-6 text-center mt-10">
+            <div className="grid grid-cols-2 gap-6 text-center mt-10">
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-yellow-400">10+</div>
                 <div className="text-gray-400 text-sm">Projects Built</div>
@@ -58,10 +69,10 @@ const Intro = () => {
                 <div className="text-2xl md:text-3xl font-bold text-yellow-400">1+</div>
                 <div className="text-gray-400 text-sm">Years Experience</div>
               </div>
-              <div>
+              {/* <div>
                 <div className="text-2xl md:text-3xl font-bold text-yellow-400">100%</div>
                 <div className="text-gray-400 text-sm">Client Satisfaction</div>
-              </div>
+              </div> */}
             </div>
           </div>
 
